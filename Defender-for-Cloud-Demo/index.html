@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7f8fa" />
+    <title>Protect your hybrid cloud | Defender for Cloud lab</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="guide-welcome">
+    <section class="guide-welcome-screen" id="guide-welcome" aria-labelledby="welcome-title">
+      <header class="welcome-header">
+        <a class="welcome-brand" href="#" aria-label="Cloud360 Defender for Cloud training lab"><img class="cloud360-logo welcome-logo" src="assets/cloud360-logo.png" alt="Cloud360" /><span><strong>Defender for Cloud</strong><small>INTERACTIVE TRAINING LAB</small></span></a>
+        <span class="environment-badge"><i></i> SIMULATED ENVIRONMENT</span>
+      </header>
+      <div class="welcome-main">
+        <div class="welcome-copy">
+          <div class="eyebrow">GUIDED EXPERIENCE <span>·</span> 8 STEPS <span>·</span> ABOUT 5 MINUTES</div>
+          <h1 id="welcome-title">Protect your hybrid cloud with Defender for Cloud</h1>
+          <p>Take the controls in a realistic, fictional security console. Explore posture, find a hybrid server recommendation, remediate it, and verify the change — no Azure account needed.</p>
+          <button class="button button-primary welcome-start" data-start-guide="0">▶ <span>Start interactive tour</span></button>
+          <button class="welcome-explore" id="explore-console">Explore the console on my own <span>→</span></button>
+        </div>
+        <div class="welcome-console" aria-label="Preview of the simulated Defender for Cloud console">
+          <div class="preview-top"><img class="cloud360-logo preview-logo" src="assets/cloud360-logo.png" alt="Cloud360" /><span>Microsoft Azure</span><span class="preview-search">⌕ &nbsp; Search resources, services, and docs</span><span>◉</span></div>
+          <div class="preview-layout"><div class="preview-sidebar"><b>☰ &nbsp; Menu</b><span>⌂ &nbsp; Home</span><span>◇ &nbsp; Defender for Cloud</span><span class="preview-active">▦ &nbsp; Security posture</span><span>▤ &nbsp; Recommendations</span><span>▥ &nbsp; Inventory</span></div>
+            <div class="preview-content"><small>MICROSOFT DEFENDER FOR CLOUD</small><h2>Security posture</h2><div class="preview-kpis"><div><small>Secure score</small><b>68%</b><i><span></span></i></div><div><small>Recommendations</small><b>13</b></div><div><small>Scopes</small><b>4</b></div></div><div class="preview-chart"><span>Secure score trend</span><svg viewBox="0 0 420 72" preserveAspectRatio="none" aria-hidden="true"><path d="M0 59 C50 54 60 47 105 50 S155 33 210 39 S260 31 315 25 S370 16 420 7" fill="none" stroke="#1683d8" stroke-width="3"/></svg></div><div class="preview-finding"><i></i><span>Endpoint protection should be installed on Azure Arc-enabled servers</span><b>HIGH</b></div></div>
+          </div>
+          <div class="preview-foot"><span>⌖ &nbsp; Northwind Group</span><span>Training tenant · fictional data</span></div>
+        </div>
+      </div>
+      <div class="chapter-heading"><div><div class="eyebrow">YOUR LEARNING PATH</div><h2>Choose where to begin</h2></div><span>Pick a chapter or start from the beginning</span></div>
+      <div class="chapter-cards">
+        <button class="chapter-card" data-start-guide="1"><span class="chapter-number blue-number">01</span><span class="chapter-copy"><strong>Understand your security posture</strong><small>Secure score · subscription scope · recommendations</small></span><span class="chapter-arrow">→</span></button>
+        <button class="chapter-card" data-start-guide="3"><span class="chapter-number green-number">02</span><span class="chapter-copy"><strong>Protect hybrid and multicloud servers</strong><small>Azure Arc · inventory · machine recommendations</small></span><span class="chapter-arrow">→</span></button>
+        <button class="chapter-card" data-start-guide="4"><span class="chapter-number orange-number">03</span><span class="chapter-copy"><strong>Remediate and verify compliance</strong><small>Resolve a hybrid finding · verify health · standards</small></span><span class="chapter-arrow">→</span></button>
+      </div>
+      <footer class="welcome-footer">A safe, fictional training simulation. Nothing connects to or changes a real Azure environment. <a href="https://learn.microsoft.com/azure/defender-for-cloud/defender-for-cloud-introduction" target="_blank" rel="noreferrer">Learn about Defender for Cloud ↗</a></footer>
+    </section>
+    <div class="portal-shell" id="portal-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#" aria-label="Cloud360 Microsoft Defender for Cloud training lab">
+        <img class="cloud360-logo portal-logo" src="assets/cloud360-logo.png" alt="Cloud360" />
+        <span><strong>Microsoft Defender for Cloud</strong><small>TRAINING TENANT</small></span>
+      </a>
+      <div class="tenant-picker">
+        <span class="tenant-icon">N</span>
+        <span><strong>Northwind Group</strong><small>Training tenant · 3 subscriptions + hybrid</small></span>
+        <span class="chevron">⌄</span>
+      </div>
+      <div class="nav-label">CLOUD SECURITY</div>
+      <nav aria-label="Main navigation">
+        <button class="nav-item portal-service"><span>◆</span> Microsoft Defender for Cloud</button>
+        <button class="nav-item active" data-view="overview"><span>▦</span> Overview</button>
+        <button class="nav-item" data-view="recommendations"><span>◇</span> Recommendations <em id="nav-recommendation-count">13</em></button>
+        <button class="nav-item" data-view="standards"><span>▤</span> Regulatory compliance</button>
+        <button class="nav-item" data-view="inventory"><span>▥</span> Asset inventory</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="lab-card"><span class="lab-dot"></span><div><strong>Simulation mode</strong><small>No Azure connection</small></div></div>
+        <button class="nav-item"><span>ⓘ</span> About this lab</button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="breadcrumbs">Home <span>/</span> <strong id="breadcrumb-current">Overview</strong></div>
+        <div class="top-actions"><label class="portal-search">⌕ <input aria-label="Search Azure services" placeholder="Search resources, services, and docs" /></label><span class="environment-badge"><i></i> SIMULATION</span><button class="avatar" aria-label="Training profile">JD</button></div>
+      </header>
+      <section class="content">
+        <div class="page-heading">
+          <div><div class="eyebrow">MONDAY, OCTOBER 12, 2026 <span>·</span> LAST ASSESSMENT 18 MIN AGO</div><h1 id="page-title">Security posture</h1><p id="page-subtitle">A unified view of your cloud security posture across the organization.</p></div>
+          <button class="button button-secondary" id="refresh-button"><span>↻</span> Refresh assessment</button>
+        </div>
+
+        <div class="scope-bar">
+          <div class="scope-left"><span class="scope-icon">⌖</span><span><small>SCOPE</small><strong id="scope-label">Northwind Group</strong></span><span class="scope-divider"></span><span class="scope-count">3 subscriptions + hybrid estate · 44 assets</span></div>
+          <label class="scope-select">Scope <select id="scope-select" aria-label="Change subscription scope"><option value="all">All subscriptions</option><option value="production">Production</option><option value="engineering">Engineering</option><option value="sandbox">Sandbox</option><option value="hybrid">Hybrid estate</option></select></label>
+        </div>
+
+        <section class="view active" id="overview-view">
+          <div class="metrics">
+            <article class="metric-card score-card">
+              <div class="metric-title">Secure score <span class="info" title="A higher score indicates improved security posture.">i</span></div>
+              <div class="score-row"><div class="score-number"><strong id="score-value">68</strong><span>%</span></div><span class="score-change">↑ 4 pts this month</span></div>
+              <div class="score-track"><span id="score-progress" style="width:68%"></span></div>
+              <div class="metric-foot"><span>Based on <b id="assessment-count">24</b> assessed controls</span><button class="text-button" data-go="recommendations">View recommendations →</button></div>
+            </article>
+            <article class="metric-card"><div class="metric-title">Active recommendations <span class="info" title="Recommendations identify security improvements across your cloud resources.">i</span></div><div class="metric-value"><strong id="active-count">13</strong><span class="severity-summary"><i class="red-dot"></i> <b id="high-priority-count">4</b> high priority</span></div><div class="metric-foot"><span id="recommendation-scope-summary">Across 3 subscriptions + hybrid</span><button class="text-button" data-go="recommendations">View all →</button></div></article>
+            <article class="metric-card"><div class="metric-title">Regulatory compliance <span class="info" title="Control assessments mapped to selected security standards.">i</span></div><div class="metric-value"><strong id="compliance-value">76</strong><span class="metric-suffix">% compliant</span></div><div class="metric-foot"><span>2 standards enabled</span><button class="text-button" data-go="standards">Explore standards →</button></div></article>
+          </div>
+
+          <div class="section-heading"><div><h2>Security posture overview</h2><p>Track control health and focus remediation where it matters most.</p></div><button class="subtle-button" data-go="standards">View compliance details <span>→</span></button></div>
+          <div class="overview-grid">
+            <article class="panel score-panel">
+              <div class="panel-heading"><div><h3>Secure score trend</h3><p>Organization score over the last 6 months</p></div><span class="period-select">Last 6 months⌄</span></div>
+              <div class="chart-wrap">
+                <div class="chart-y"><span>100%</span><span>75%</span><span>50%</span><span>25%</span><span>0%</span></div>
+                <div class="chart-area"><div class="chart-grid"><i></i><i></i><i></i><i></i><i></i></div><svg viewBox="0 0 600 190" preserveAspectRatio="none" role="img" aria-label="Secure score has risen from 51 percent to 68 percent over six months"><defs><linearGradient id="fill" x1="0" x2="0" y1="0" y2="1"><stop offset="0%" stop-color="#1683d8" stop-opacity=".20"/><stop offset="100%" stop-color="#1683d8" stop-opacity="0"/></linearGradient></defs><path class="area" d="M0 116 C45 110 55 106 100 103 S155 96 200 94 S255 82 300 79 S355 72 400 66 S455 68 500 55 S555 48 600 40 L600 190 L0 190Z"/><path class="line" d="M0 116 C45 110 55 106 100 103 S155 96 200 94 S255 82 300 79 S355 72 400 66 S455 68 500 55 S555 48 600 40"/><circle cx="600" cy="40" r="4"/></svg><div class="chart-x"><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span></div></div>
+              </div>
+              <div class="chart-legend"><i></i> Secure score <span>Target</span><b>80%</b></div>
+            </article>
+            <article class="panel standards-panel">
+              <div class="panel-heading"><div><h3>Regulatory compliance</h3><p>Compliance across enabled standards</p></div><button class="icon-button" aria-label="More compliance options">···</button></div>
+              <div class="standard-row"><div class="standard-icon blue">M</div><div class="standard-info"><strong>Microsoft cloud security benchmark</strong><small>24 controls · 6 unhealthy</small></div><div class="ring" style="--progress:76"><span>76%</span></div></div>
+              <div class="standard-row"><div class="standard-icon purple">A</div><div class="standard-info"><strong>Azure CIS 2.0.0</strong><small>18 controls · 5 unhealthy</small></div><div class="ring purple-ring" style="--progress:72"><span>72%</span></div></div>
+              <button class="full-link" data-go="standards">View all standards <span>→</span></button>
+            </article>
+          </div>
+          <div class="section-heading recommendations-heading"><div><h2>Top recommendations</h2><p>Address high-impact issues to improve your security posture.</p></div><button class="subtle-button" data-go="recommendations">View all recommendations <span>→</span></button></div>
+          <div class="panel table-panel" id="top-recommendations"></div>
+          <div class="training-note"><span>✦</span><div><strong>Training simulation</strong><p>All resources, scores, and actions are fictional. Try the remediation workflow to see how prioritization and bulk fixes work.</p></div><button id="reset-button">Reset simulation</button></div>
+        </section>
+
+        <section class="view" id="recommendations-view">
+          <div class="list-summary"><div><h2>Recommendations</h2><p>Prioritized security actions across your cloud environment.</p></div><div class="summary-chips"><span><i class="red-dot"></i><b id="list-high-count">3</b> High</span><span><i class="amber-dot"></i><b id="list-medium-count">6</b> Medium</span><span><i class="green-dot"></i><b id="list-fixed-count">0</b> Fixed</span></div></div>
+          <div class="filter-bar"><label class="search-box"><span>⌕</span><input id="search-input" type="search" placeholder="Search recommendations or resources" /></label><select id="severity-filter" aria-label="Filter by severity"><option value="all">All severities</option><option value="High">High</option><option value="Medium">Medium</option><option value="Low">Low</option></select><select id="status-filter" aria-label="Filter by status"><option value="active">Active findings</option><option value="all">All statuses</option><option value="fixed">Fixed</option></select></div>
+          <div class="bulk-bar" id="bulk-bar"><span><b id="selected-count">0</b> selected</span><button id="clear-selection" class="text-button">Clear selection</button><button id="remediate-selected" class="button button-primary">▶ Simulate remediation</button></div>
+          <div class="panel table-panel full-table" id="recommendations-table"></div>
+        </section>
+
+        <section class="view" id="standards-view">
+          <div class="list-summary"><div><h2>Regulatory compliance</h2><p>Understand how cloud controls map to industry standards.</p></div><span class="environment-badge"><i></i> 2 STANDARDS ENABLED</span></div>
+          <div class="standard-cards" id="standards-list"></div>
+          <div class="panel standards-explainer"><div class="explainer-icon">✓</div><div><h3>How compliance assessments work</h3><p>Defender for Cloud continuously evaluates resources against the requirements in each enabled standard. Unhealthy assessments link to recommendations that help you improve compliance. A single recommendation may support multiple controls or standards.</p><button class="text-button" data-go="recommendations">Explore related recommendations →</button></div></div>
+        </section>
+
+        <section class="view" id="inventory-view">
+          <div class="list-summary"><div><h2>Asset inventory</h2><p>Sample of 18 fictional resources from 44 assets across three subscriptions and a hybrid estate.</p></div><span class="environment-badge"><i></i> DEMO DATA</span></div>
+          <div class="metrics inventory-metrics"><article class="metric-card"><div class="metric-title">Total resources</div><div class="metric-value"><strong id="resource-count">44</strong><span class="metric-suffix" id="inventory-scope-summary">across 3 subscriptions + hybrid</span></div></article><article class="metric-card"><div class="metric-title">Resource types</div><div class="metric-value"><strong>9</strong><span class="metric-suffix">Azure &amp; hybrid assets</span></div></article><article class="metric-card"><div class="metric-title">Unhealthy resources</div><div class="metric-value"><strong id="unhealthy-count">12</strong><span class="metric-suffix">need attention</span></div></article></div>
+          <div class="panel table-panel full-table" id="inventory-table"></div>
+        </section>
+      </section>
+    </main>
+    </div>
+    <aside class="tour-caption" id="tour-caption" aria-live="polite" hidden>
+      <div class="tour-caption-head"><span class="tour-step-label" id="tour-step-label">STEP 1 OF 8</span><button id="exit-guide" class="tour-close" aria-label="Exit guided tour">×</button></div>
+      <div class="tour-chapter-label" id="tour-chapter-label">WELCOME</div>
+      <h2 id="tour-title">Welcome to the lab</h2>
+      <p id="tour-description"></p>
+      <div class="tour-action-wrap" id="tour-action-wrap"></div>
+    </aside>
+    <aside class="script-panel" id="script-panel" aria-label="Guide script" hidden>
+      <div class="script-head"><div><div class="eyebrow">GUIDED TOUR SCRIPT</div><h2>Follow the walkthrough</h2></div><button id="close-script" class="tour-close" aria-label="Close script">×</button></div>
+      <div id="script-steps" class="script-steps"></div>
+    </aside>
+    <nav class="tour-controls" id="tour-controls" aria-label="Guided walkthrough controls" hidden>
+      <button class="player-button" id="previous-step" aria-label="Previous step" title="Previous step">‹</button>
+      <button class="player-button play-button" id="play-tour" aria-label="Play guided tour" title="Play guided tour">▶</button>
+      <button class="player-button" id="next-step" aria-label="Next step" title="Next step">›</button>
+      <div class="player-progress"><div class="player-caption"><span id="player-title">Introduction</span><span><b id="step-time">01</b> / <span id="step-total">08</span></span></div><input id="step-seek" aria-label="Walkthrough step" type="range" min="0" max="7" value="0" /><div class="player-chapters"><span>Posture</span><span>Hybrid estate</span><span>Remediate &amp; verify</span></div></div>
+      <button class="player-utility" id="toggle-narration" aria-label="Turn narration on; prefers a feminine Indian English voice when available" title="Narration prefers a feminine Indian English voice when available in this browser">◖♪</button>
+      <button class="player-utility" id="toggle-script" aria-label="Show script" title="Show script">▤</button>
+      <button class="player-utility" id="toggle-fullscreen" aria-label="Enter full screen" title="Full screen">⛶</button>
+      <button class="player-exit" id="finish-guide">Exit tour</button>
+    </nav>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <dialog id="remediation-dialog" class="dialog">
+      <form method="dialog"><button class="dialog-close" aria-label="Close">×</button></form>
+      <div class="dialog-icon">✓</div><div class="eyebrow">SIMULATED ACTION</div><h2>Remediation complete</h2><p id="dialog-message">The selected recommendations have been marked as remediated in this simulation.</p>
+      <div class="dialog-impact"><span>Secure score</span><strong id="dialog-score">+0 points</strong></div>
+      <div class="dialog-impact"><span>Findings resolved</span><strong id="dialog-fixed">0 recommendations</strong></div>
+      <button class="button button-primary dialog-done" id="dialog-done">Continue learning</button>
+      <small>This action changed only the local demo state. No cloud resources were modified.</small>
+    </dialog>
+    <script src="app.js"></script>
+  </body>
+</html>

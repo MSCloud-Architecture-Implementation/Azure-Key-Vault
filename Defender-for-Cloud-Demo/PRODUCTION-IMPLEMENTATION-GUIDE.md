@@ -158,10 +158,16 @@ First choose an approved destination (Log Analytics workspace or Event Hubs), su
 
 ### Lab 7 — Extend onboarding to a management group after the pilot
 
-Do not begin this lab until Labs 0–6 have passed, cost/compliance/security owners have approved the expansion, and a rollout wave has a rollback and exception plan. Management-group scope can affect many subscriptions.
+Do not begin this lab until Labs 0–5 have passed, any optional Lab 6 automation has been tested or explicitly excluded, cost/compliance/security owners have approved the expansion, and a rollout wave has a rollback and exception plan. Management-group scope can affect many subscriptions.
 
 1. In the Azure portal, open **Management groups** and confirm the exact target management-group ID, its parent, and its child subscriptions. Record any subscriptions that are deliberately out of scope.
-2. As an appropriately privileged administrator, register the `Microsoft.Security` resource provider at the management-group scope if it is not already registered. Verify the registration state before policy assignment.
+2. As a **Security Admin** with the necessary management-group access, register the `Microsoft.Security` resource provider at the management-group scope if it is not already registered. From Azure Cloud Shell or an authenticated Azure CLI session, replace the placeholder with the management-group **ID** (not its display name) and run:
+
+   ```bash
+   az provider register --namespace Microsoft.Security --management-group-id "<management-group-id>"
+   ```
+
+   Verify registration before policy assignment in **Subscriptions** > **Resource providers** or the applicable management-group provider registration view. If you cannot verify the scope/state, stop and ask the Azure platform owner.
 3. Open **Policy** > **Definitions** and search for **Enable Microsoft Defender for Cloud on your subscription**.
 4. Open the definition and select **Assign**. Set the **Scope** to the approved management group; review exclusions and parameters. Do not select the tenant root management group unless that is explicitly approved.
 5. On **Remediation**, select **Create a remediation task** so existing noncompliant subscriptions can be onboarded. Review the task scope and what it does, then create the assignment/remediation task through the change record.

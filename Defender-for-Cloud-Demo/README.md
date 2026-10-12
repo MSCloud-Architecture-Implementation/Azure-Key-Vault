@@ -30,4 +30,4 @@ This is a learning aid, not the Defender for Cloud product. All tenant, subscrip
 - [Reference guided experience: Protect your hybrid cloud with Azure Security Center](https://mslearn.cloudguides.com/guides/Protect%20your%20hybrid%20cloud%20with%20Azure%20Security%20Center)
 - [Microsoft Defender for Cloud overview](https://learn.microsoft.com/azure/defender-for-cloud/defender-for-cloud-introduction)
 - [Connect non-Azure machines to Defender for Cloud with Azure Arc](https://learn.microsoft.com/azure/defender-for-cloud/quickstart-onboard-machines)
-- [Production implementation guide](./PRODUCTION-IMPLEMENTATION-GUIDE.md) — phased rollout, hybrid onboarding, standards, remediation controls, monitoring, and Well-Architected alignment.
+- [Production implementation guide](./PRODUCTION-IMPLEMENTATION-GUIDE.md) — a click-by-click, pilot-first deployment runbook with Microsoft Learn portal snapshots, hands-on Azure Arc onboarding, standards, guarded remediation, export, and Well-Architected rollout guidance.
